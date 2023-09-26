@@ -45,3 +45,7 @@ app.*.map.json
 
 
 .fvm/flutter_sdk
+.firebase
+web/.well-known/assetlinks.json
+android/app/google-services.json
+.gitignore

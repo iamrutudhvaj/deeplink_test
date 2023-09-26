@@ -1,3 +1,4 @@
+import 'package:deeplink_test/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -11,10 +12,39 @@ class HomeView extends GetView<HomeController> {
       appBar: AppBar(
         title: const Text('DeepLink Test'),
       ),
-      body: const Center(
-        child: Text(
-          'DeepLink is working',
-          style: TextStyle(fontSize: 20),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              'DeepLink is working',
+              style: TextStyle(fontSize: 20),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed(Routes.PROFILE_PAGE);
+              },
+              child: const Text(
+                'Profile Page',
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed(Routes.NOTIFICATION_PAGE);
+              },
+              child: const Text(
+                'Notification Page',
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+          ],
         ),
       ),
     );
